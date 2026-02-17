@@ -1,6 +1,6 @@
 # San Francisco Airbnb Ratings Prediction
 
-This project focuses on predicting the average rating for Airbnb listings in San Francisco using data from December 2023. The goal is to build regression models that accurately estimate ratings and to identify which specific listing features—such as price, host behavior, and amenities—significantly influence guest experiences.
+This project focuses on predicting the average rating for Airbnb listings in San Francisco using data from December 2023. The goal is to build regression models that accurately estimate ratings and to identify which specific features significantly influence guest experiences.
 
 ## Project Overview
 
