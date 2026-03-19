@@ -30,7 +30,7 @@ Random Forest Regressor to capture non-linear relationships, Linear Regression f
 
 ### Key Insights
 
-Host Experience: The most significant predictors of ratings were found to be the host's total listing count and the number of private rooms they manage. This suggests that more experienced hosts tend to receive better reviews.
+Host Experience: The most significant predictors of ratings were found to be the host's total listing count and the number of private rooms they manage. More listings were associated with lower ratings. This suggests that hosts with more listings may have less time to optimize the guests' experience.
 
 Price and Stability: Higher-priced listings generally receive higher and more stable (lower variance) ratings.
 
