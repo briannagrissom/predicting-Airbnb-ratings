@@ -1,10 +1,13 @@
 # San Francisco Airbnb Ratings Prediction
 
-This project focuses on predicting the average rating for Airbnb listings in San Francisco using data from December 2023. The goal is to build regression models that accurately estimate ratings and to identify which specific features significantly influence guest experiences.
+This project predicts the average rating for Airbnb listings in San Francisco using data from December 2023. The goal is to build regression models that accurately estimate ratings and to identify which specific features significantly influence guest experience.
+
+<img width="657" height="426" alt="Screenshot 2026-08-10 at 3 46 53 PM" src="https://github.com/user-attachments/assets/a0aebc62-8768-440b-88a8-4c5e4da974b1" />
+
 
 ## Project Overview
 
-The dataset contains over 6,000 observations of Airbnb listings. Since ratings are continuous values ranging from 1 to 5 stars, this is treated as a regression problem. The project explores various machine learning algorithms to determine which factors contribute most to high star ratings.
+The dataset contains over 6,000 observations of Airbnb listings. Since ratings are continuous values ranging from 1 to 5 stars, this is treated as a regression problem. The project explores various machine learning algorithms to determine which factors contribute the most to high star ratings.
 
 ### Data Source
 
@@ -13,25 +16,32 @@ The listing data was sourced from Inside Airbnb, specifically the San Francisco 
 ### Features and Preprocessing
 The raw data was cleaned and transformed to improve model performance:
 
-Feature Engineering: Created new indicators such as "Days as Host," "Number of Amenities," and whether the host lives locally in San Francisco.
+**Feature Engineering**: Created new indicators such as "Days as Host," "Number of Amenities," and whether the host lives locally in San Francisco.
 
-Data Cleaning: Dropped irrelevant metadata columns (e.g., URLs, descriptions) and focused on listing-specific attributes.
+**Data Cleaning**: Dropped irrelevant metadata columns (e.g., URLs, descriptions) and focused on listing-specific attributes instead.
 
-Imputation: Missing values for numerical features like beds, host_response_rate, and reviews_per_month were handled using a K-Nearest Neighbors (KNN) imputer.
+**Imputation**: Missing values for numerical features like beds, host_response_rate, and reviews_per_month were handled using a K-Nearest Neighbors (KNN) imputer.
 
-Exploratory Data Analysis: Analyzed the distribution of reviews, which showed a strong skew toward 5-star ratings, evaluated the impact of price bins on median ratings, and explored how various feature varibles correlated with customer rating.
+**Exploratory Data Analysis**: Analyzed the distribution of reviews, showing a strong skew toward 5-star ratings. Evaluated the impact of price on median rating. Explored how various feature variables correlate with customer rating.
 
 ### Models Explored
 
 The following regression models were implemented and compared:
 
-Random Forest Regressor to capture non-linear relationships, Linear Regression for a standard baseline, Support Vector Regression to explore high-dimensional spaces, and Gradient Boosting Regressor to explore sequentially-made trees.
+**Random Forest Regressor** to capture non-linear relationships, **Linear Regression** for a standard baseline, **Support Vector Regression** to explore high-dimensional spaces, and **Gradient Boosting Regressor** to explore sequentially-made trees.
 
 
 ### Key Insights
 
-Host Experience: The most significant predictors of ratings were found to be the host's total listing count and the number of private rooms they manage. More listings were associated with lower ratings. This suggests that hosts with more listings may have less time to optimize the guests' experience.
+The most significant predictors of ratings were found to be the **host's total listing count** and the **number of private rooms** they manage. More listings were associated with lower ratings. This suggests that hosts with more listings may have less time to optimize the guests' experience.
 
-Price and Stability: Higher-priced listings generally receive higher and more stable (lower variance) ratings.
+<img width="1088" height="502" alt="Screenshot 2026-08-10 at 3 50 46 PM" src="https://github.com/user-attachments/assets/4eb2105b-f1c4-4a7d-bea6-fe35ab54264c" />
 
-Model Limitations: Due to the heavily skewed distribution of reviews (most being near 5.0), models tended to overpredict for lower-rated listings. Future improvements would benefit from a more even distribution of rating data.
+**Price and Stability**: Higher-priced listings generally receive higher and more stable (lower variance) ratings.
+
+**Model Limitations**
+
+: Due to the heavily skewed distribution of reviews (most being near 5.0), models tended to overpredict for lower-rated listings. Future improvements would benefit from a more even distribution of rating data.
+
+<img width="423" height="264" alt="Screenshot 2026-08-10 at 3 51 27 PM" src="https://github.com/user-attachments/assets/f5429f58-4614-4089-b7d9-c6cf6b088d23" />
+
